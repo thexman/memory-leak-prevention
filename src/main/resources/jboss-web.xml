@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>	
+	<listener>
+		<class-name>org.apache.catalina.core.JreMemoryLeakPreventionListener</class-name>
+		<listener-type>LIFECYCLE</listener-type>	
+	</listener>
+	
+	<listener>
+		<class-name>com.a9ski.catalina.MemoryLeakPreventionListener</class-name>
+		<listener-type>LIFECYCLE</listener-type>
+		<param>
+			<param-name>keepAlivePreventionDisabled</param-name>
+			<param-value>false</param-value>
+		</param>	
+		<param>
+			<param-name>cleanThreadLocalsDisabled</param-name>
+			<param-value>false</param-value>
+		</param>
+		<param>
+			<param-name>cleanThreadLocalsInNewThread</param-name>
+			<param-value>false</param-value>
+		</param>
+		<param>
+			<param-name>cleanThreadLocalsWaitTime</param-name>
+			<param-value>0</param-value>
+		</param>
+		<param>
+			<param-name>lifecycleEventType</param-name>
+			<param-value>destroy</param-value>
+		</param>
+				
+	</listener>
+</jboss-web>
